@@ -2,8 +2,6 @@
 import React, { Component } from 'react';
 import BookList from './components/BookList';
 import Navbar from './components/Navbar';
-import ThemeToggle from './components/ThemeToggle';
-import ThemeContextProvider from './contexts/ThemeContext';
 
 class App extends Component {
   // eslint-disable-next-line react/state-in-constructor
@@ -12,11 +10,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ThemeContextProvider>
-          <Navbar />
-          <BookList />
-          <ThemeToggle />
-        </ThemeContextProvider>
+        <Navbar />
+        <BookList />
       </div>
     );
   }
