@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/static-property-placement */
 import React, { Component } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
@@ -18,9 +16,7 @@ class Navbar extends Component {
               return (
                 <nav style={{ background: theme.ui, color: theme.syntax }}>
                   <h1>Context App</h1>
-                  <div onClick={toggleAuth}>
-                    {isAuthenticated ? 'Logged in' : 'Logged out'}
-                  </div>
+                  <div>{isAuthenticated ? 'Logged in' : 'Logged out'}</div>
                   <ul>
                     <li>Home</li>
                     <li>About</li>
